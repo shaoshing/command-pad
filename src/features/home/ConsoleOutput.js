@@ -13,10 +13,7 @@ export default class ConsoleOutput extends PureComponent {
   };
 
   componentDidUpdate() {
-    const n = this.scrollNode;
-    if (n.scrollHeight - n.scrollTop < n.offsetHeight * 1.8) {
-      n.scrollTop = n.scrollHeight;
-    }
+    this.scrollNode.scrollTop = this.scrollNode.scrollHeight;
   }
 
   render() {

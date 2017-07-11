@@ -294,7 +294,7 @@ class CmdListItem extends PureComponent {
             {cmd.name || cmd.cmd || 'No name.'}
           </Link>
         </div>
-        
+
         {!editing && this.renderOutput(cmd)}
 
         <div className="buttons">
@@ -303,7 +303,7 @@ class CmdListItem extends PureComponent {
           {
             !editing && cmd.outputs && cmd.outputs.length > 0 &&
             <Popover
-              trigger="hover"
+              trigger="click"
               content={this.getOutputPopover(cmd.id)}
               placement="left"
               getTooltipContainer={this.getTooltipContainer}
